@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+h1 {
+    color: blue;
+}
+</style>
+</head>
+<body>
+	EMP_LIST
+	
+	<table border=1>
+	<th> 사번</th>
+	<th> 이름</th>
+	<th> 성별</th>
+	<th> 주소</th>
+		{% for emp in emps %}
+			<tr> 
+				<td>{{emp.e_id}}</td>
+				<td>{{emp.e_name}}</td>
+				<td>{{emp.sex}}</td>
+				<td>{{emp.addr}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

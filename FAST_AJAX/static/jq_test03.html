@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.myit{
+		width: 20px;
+	}
+</style>
+<script src="js/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	function myPlus(){
+		var obj1 = $("#it1").val();
+		var obj2 = $("#it2").val();
+		
+		var a = parseInt(obj1);
+		var b = parseInt(obj2);
+	
+		$("#it3").val(a + b);
+	}
+	
+	function myMinus(){
+		var obj1 = $("#it1").val();
+		var obj2 = $("#it2").val();
+		
+		var a = parseInt(obj1);
+		var b = parseInt(obj2);
+	
+		console.log(a);
+		$("#it3").val(a - b);
+	}
+	
+	function myMultiply(){
+		var obj1 = $("#it1").val();
+		var obj2 = $("#it2").val();
+		
+		var a = parseInt(obj1);
+		var b = parseInt(obj2);
+	
+		console.log(a);
+		$("#it3").val(a * b);
+	}
+	
+	function myDivide(){
+		var obj1 = $("#it1").val();
+		var obj2 = $("#it2").val();
+		
+		var a = parseInt(obj1);
+		var b = parseInt(obj2);
+	
+		console.log(a);
+		$("#it3").val(a / b);
+	}
+	
+	$(document).ready(function(){ 
+		$("#plus").bind("click",function(){
+			myPlus();
+		});
+		$("#minus").bind("click",function(){
+			myMinus();
+		});
+		$("#multiply").bind("click",function(){
+			myMultiply();
+		});
+		$("#divide").bind("click",function(){
+			myDivide();
+		});
+	});
+
+</script>
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<td>
+				<input type="text" class="myit" id="it1">
+			</td>
+			<td>
+				<input type="button" value="plus" id="plus" ><br>
+				<input type="button" value="minus" id="minus"><br>
+				<input type="button" value="multiply" id="multiply" ><br>
+				<input type="button" value="divide" id="divide" ><br>
+			</td>
+			<td>
+				<input type="text" class="myit" id="it2">
+			</td>
+			<td>=</td>
+			<td>
+				<input type="text" class="myit" id="it3">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+h1 {
+    color: blue;
+}
+</style>
+</head>
+<body>
+<!-- 	<h1>str : {{ str }}</h1> -->
+<!-- 	<h1>arr : {{ arr }}</h1> -->
+<!-- 	<h1> -->
+<!-- 		{% for i in arr %} -->
+<!-- 		{{ i }} -->
+<!-- 		{% endfor %} -->
+<!-- 	</h1> -->
+
+
+	<h3>{{ emps }}</h3>
+
+	<table border=1>	
+		<th> 사번</th>
+		<th> 이름</th>
+		<th> 성별</th>
+		<th> 주소</th>	
+		{% for i in emps %}
+			<tr> 
+				{% for value in i.values() %}
+					<td>{{value}}</td>
+				{% endfor %}
+			</tr>
+		{% endfor %}
+	</table>
+	
+	
+	<table border=1>
+		<thead>
+		<th> 사번</th>
+		<th> 이름</th>
+		<th> 성별</th>
+		<th> 주소</th>
+		</thead>	
+		{% for emp in emps %}
+			<tr> 
+				<td>{{emp.e_id}}</td>
+				<td>{{emp.e_name}}</td>
+				<td>{{emp.sex}}</td>
+				<td>{{emp.addr}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

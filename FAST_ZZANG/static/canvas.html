@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myinit(){  // 원그리기
+		var canvas = document.querySelector('#mycan');
+		var ctx = canvas.getContext('2d');
+		ctx.beginPath();
+		ctx.arc(150, 150, 110, 0, 2*Math.PI);
+		ctx.stroke();
+		ctx.fillStyle = 'green';
+        ctx.fill();
+	}
+	
+
+</script>
+</head>
+<body onload="myinit()">
+
+<canvas id="mycan"  width="500" height="500">
+
+</canvas>
+
+</body>
+</html>
